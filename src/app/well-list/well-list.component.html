@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Source
+            </th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let list of wellList;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{list.name}}</td>
+            <td [ngClass]="list.type=='esp'?'esp_background':'rls_background'">{{list.type}}</td>
+            <td (click)="goToAddWell(list)">{{list.source}}</td>
+
+
+        </tr>
+
+    </tbody>
+
+</table>
+<app-add-well [hero]="data" (getAddedWell)="getAddedWell($event)"></app-add-well>

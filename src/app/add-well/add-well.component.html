@@ -1,0 +1,28 @@
+    <h2>Add Well</h2>
+        <!-- <div class="col-sm-6" style="text-align:center"> -->
+            <div class="card" style="width: 50%;margin-left:30%">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="name">Name</label>
+                          <input type="text" [(ngModel)]="wellData.name" name="testname" class="form-control" id="name"  placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type</label>
+                            <input type="text"  [(ngModel)]="wellData.type " name="testtype" class="form-control" id="type"  placeholder="Enter type">
+                          </div>
+                          <div class="form-group">
+                            <label for="sourcekey">Source Key</label>
+                            <input type="text" value="{{hero}}" class="form-control" id="sourcekey" readonly>
+                          </div>
+                    
+                    
+                        <button type="submit" (click)="addWell()"class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+            
+            <!-- </div> -->
+        </div>
+
+
+

@@ -1,0 +1,32 @@
+<ng-container *ngIf="showData; else showtable">
+    <p>Hello welcome to the users projects.....</p>
+</ng-container>
+<ng-template #showtable>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Age
+                </th>
+            </tr>
+    
+        </thead>
+        <tbody>
+            <tr *ngFor="let users of userData;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{users.name}}</td>
+                <td>{{users.age}}</td>
+    
+            </tr>
+    
+        </tbody>
+    
+    </table>
+</ng-template>
+
